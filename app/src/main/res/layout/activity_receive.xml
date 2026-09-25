@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ReceiveActivity"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/sec_tit"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:background="#BC4919"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="40dp"
+        android:text="Secure file preview"
+        android:textColor="@color/white"
+        android:textSize="33dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/sec_tit"
+        app:layout_constraintBottom_toTopOf="@id/back_home_btn"
+        >
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/code_enter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical"
+            >
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter the code to preview the file"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="60dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:padding="10dp"
+
+
+                />
+            <EditText
+                android:id="@+id/codeInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="4"
+                android:gravity="center_horizontal|center_vertical"
+                android:textSize="22sp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:hint="XXXX"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/check_code_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue  >️"
+                android:paddingRight="50dp"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:cornerRadius="10dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginTop="30dp"
+                />
+
+
+        </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/Content_viewer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                >
+
+            </FrameLayout>
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_home_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Finish and return home"
+        android:backgroundTint="@color/light_grey"
+        android:textColor="@color/orange"
+        app:cornerRadius="10dp"
+        android:layout_margin="40dp"
+        android:padding="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
